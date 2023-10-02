@@ -1,4 +1,3 @@
-```markdown
 # Cancer Prediction Web Application
 
 ## Overview
@@ -16,15 +15,15 @@ The project is structured as follows:
   - `index.html`: The home page for the web application.
   - `prediction.html`: The page displaying the prediction result.
 
-## Getting Started
+ ## Getting Started
 
 To run the web application locally, follow these steps:
 
 1. Clone the repository:
-
+```markdown
    ```bash
    git clone <repository_url>
-   cd cancer-prediction-web-app
+   cd cancer-prediction
    ```
 
 2. Install the required dependencies. It's recommended to use a virtual environment:
@@ -63,6 +62,3 @@ This project is licensed under the [MIT License](LICENSE).
 ## Acknowledgments
 
 - Thanks to the developers of Flask and the machine learning libraries used in this project.
-```
-
-Make sure to replace `<repository_url>` with the actual URL of your Git repository. This README provides an overview of your project's structure, how to run it, and other essential information for users and contributors.
