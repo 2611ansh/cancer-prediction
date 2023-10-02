@@ -1,44 +1,68 @@
-# CancerProject
+```markdown
+# Cancer Prediction Web Application
 
-Main Goal of this project is to predict wheter given person has cancer or not based on below parameters.
+## Overview
 
-Ten real-valued features are computed for each cell nucleus:
+This is a web application for predicting cancer based on input features. It utilizes a machine learning model to provide predictions and probabilities for cancer diagnosis.
 
-1. radius (mean of distances from center to points on the perimeter)
-2. texture (standard deviation of gray-scale values)
-3. perimeter
-4. area
-5. smoothness (local variation in radius lengths)
-6. compactness (perimeter^2 / area - 1.0)
-7. concavity (severity of concave portions of the contour)
-8. concave points (number of concave portions of the contour)
-9. symmetry
-10. fractal dimension ("coastline approximation" - 1)
+## Project Structure
 
-The mean, standard error and "worst" or largest (mean of the three
-largest values) of these features were computed for each image,
-resulting in 30 features. For instance, field 3 is Mean Radius, field
-13 is Radius SE, field 23 is Worst Radius.
+The project is structured as follows:
 
+- `application.py`: The main Flask application that handles HTTP requests and serves the web interface.
+- `src/pipelines`: This directory contains the prediction pipeline.
+  - `prediction_pipeline.py`: Contains the machine learning model and prediction logic.
+- `templates`: This directory contains HTML templates for rendering web pages.
+  - `index.html`: The home page for the web application.
+  - `prediction.html`: The page displaying the prediction result.
 
-# How to run the app in VS code
+## Getting Started
 
-In order to run this application write below command in VS Code terminal:
+To run the web application locally, follow these steps:
 
-~~~
-python application.py
-~~~
-Address to run this application : [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+1. Clone the repository:
 
-# Project UI
+   ```bash
+   git clone <repository_url>
+   cd cancer-prediction-web-app
+   ```
 
-Screenshot 1: 
-![UI1 ](UserInterface/ScreenShot1.jpeg)
+2. Install the required dependencies. It's recommended to use a virtual environment:
 
-Screenshot 2 (Submit Button):
-![UI2 ](UserInterface/ScreenShot2.jpeg)
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
 
-Output Page Shows Prediction and Probability as below:
-![OUTPUT IMG](UserInterface/OUTPUT.jpeg)
+3. Start the Flask application:
 
+   ```bash
+   python application.py
+   ```
 
+4. Open a web browser and go to `http://localhost:5000` to access the web application.
+
+## Usage
+
+1. On the home page, you'll find a form where you can input various features related to cancer diagnosis.
+
+2. Fill in the feature values and click the "Predict" button.
+
+3. The application will use the machine learning model to predict the diagnosis and display the result on the prediction page.
+
+## Dependencies
+
+- Flask: The web framework used for building the application.
+- Other Python libraries used for data processing and machine learning.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- Thanks to the developers of Flask and the machine learning libraries used in this project.
+```
+
+Make sure to replace `<repository_url>` with the actual URL of your Git repository. This README provides an overview of your project's structure, how to run it, and other essential information for users and contributors.
